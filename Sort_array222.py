@@ -22,15 +22,17 @@ def find_index(mass, target):
     for i in range(N):
         mass.append(randint(1, N + 1))
         # Создан отсортированный массив случайных чисел
-        mass.sort()
-        if target not in mass[:target]:
+        a = sorted(mass)
+        if target in a[:target]:
+            indx_target = a.index(target)
+            print('Our array', a)
+            return 'Index: ', indx_target
+            break
+        else:
             counter += 1
             print('puk', counter)
             continue
-        else:
-            indx_target = mass.index(target)
-            print('Our array', mass)
-            return 'Index: ', indx_target
+
     if counter == N:
             print('Number is not in array')
 print(find_index(mass, target))

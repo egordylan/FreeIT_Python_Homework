@@ -25,6 +25,7 @@ def find_index(mass, target):
         mass.sort()
         if target not in mass:
             counter += 1
+            print('puk')
             continue
         else:
             indx_target = mass.index(target)
