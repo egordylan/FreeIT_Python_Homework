@@ -20,7 +20,7 @@ N = 1_000_000  # Количество элементов массива
 def find_index(mass, target):
     counter = 0
     for i in range(N):
-        mass.append(randint(1, 1_000_000))
+        mass.append(randint(1, N + 1))
         # Создан отсортированный массив случайных чисел
         mass.sort()
         if target not in mass:
